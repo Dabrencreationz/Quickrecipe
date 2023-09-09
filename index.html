@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuickRecipe App</title>
+    <!-- Add your CSS stylesheets here -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>QuickRecipe App</h1>
+    
+    <!-- Ingredient Input Form -->
+    <form action="/" method="POST">
+        <label for="ingredients">Enter ingredients (comma-seperated):</label>
+        <input type="text" id="ingredients" name="ingredients" required>
+        <button type="submit">Search</button>
+    </form>
+
+    <!-- Display Recipe Results -->
+    <div id="recipe-results">
+        {% if recipes %}
+            <h2>Recipes:</h2>
+            <ul>
+                {% for recipe in recipes %}
+                    <li>
+                        <h3>{{ recipe.title }}</h3>
+                        <p>{{ recipe.ingredients }}</p>
+                        <p>Time to prepare: {{ recipe.readyInMinutes }} minutes</p>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <p>No recipes found. Try different ingredients.</p>
+        {% endif %}
+    </div>
+
+    <!-- Add any additional HTML elements and styling here -->
+    <footer>
+        copyright &copy; 2023 QuickRecipe. All right reserved
+    </footer>
+</body>
+</html>
