@@ -3,7 +3,7 @@ body {
     background-color: rgb(123, 153, 165);
     text-align: center;
     margin: 40px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Times New Roman', Times, serif, Helvetica, sans-serif;
 }
 h1 {
     margin-bottom: 20px;
