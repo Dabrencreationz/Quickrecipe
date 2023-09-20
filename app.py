@@ -39,7 +39,7 @@ def search_recipes(query):
     params = {
         'apiKey': API_KEY,
         'query': query,
-        'number': 10,
+        'number': 20,
         'instructionsRequired': True,
         'addRecipeInformation': True,
         'fillIngredients': True,
